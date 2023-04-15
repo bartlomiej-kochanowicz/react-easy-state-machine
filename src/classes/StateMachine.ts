@@ -1,5 +1,5 @@
-import type { Dict } from './types/Dict.type';
-import type { Transitions } from './types/Transitions.type';
+import type { Dict } from '../types/Dict.type';
+import type { Transitions } from '../types/Transitions.type';
 
 /** Class representing a StateMachine. */
 export class StateMachine<States extends string, Actions extends string> {

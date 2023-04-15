@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StateMachine } from './StateMachine';
+import { StateMachine } from '../classes/StateMachine';
 
 export const useStateMachine = <States extends string, Actions extends string>(
   stateMachine: StateMachine<States, Actions>,
