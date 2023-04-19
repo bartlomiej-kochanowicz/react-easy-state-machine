@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bartlomiej-kochanowicz/react-easy-state-machine.git"
+    "url": "https://github.com/bartlomiej-kochanowicz/react-easy-state-machine"
   },
   "keywords": [
     "react",
