@@ -14,7 +14,8 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "build": "rm -rf dist && tsc && rollup -c",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "@types/react": "18.0.35",
     "@typescript-eslint/eslint-plugin": "5.58.0",
     "@typescript-eslint/parser": "5.58.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.38.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
@@ -53,5 +55,10 @@
   },
   "peerDependencies": {
     "react": "^16.9.0 || ^17.0.0 || ^18.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
