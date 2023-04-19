@@ -14,7 +14,7 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "build": "rm -rf dist && tsc && rollup -c",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release --branches main",
     "commit": "cz"
   },
   "repository": {
