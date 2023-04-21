@@ -14,7 +14,6 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "build": "rm -rf dist && tsc && rollup -c",
-    "semantic-release": "semantic-release",
     "cz": "cz"
   },
   "repository": {
@@ -49,7 +48,6 @@
     "jest": "29.5.0",
     "prettier": "2.8.7",
     "rollup": "3.20.2",
-    "semantic-release": "21.0.1",
     "ts-jest": "29.1.0",
     "typescript": "5.0.4"
   },

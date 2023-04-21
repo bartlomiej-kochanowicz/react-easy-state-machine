@@ -27,7 +27,7 @@ type MachineStates = 'view1' | 'view2' | 'view3';
 
 type MachineActions = 'CHANGE_TO_VIEW_1' | 'CHANGE_TO_VIEW_2 | 'CHANGE_TO_VIEW_3';
 
-const SigninStateMachine = new StateMachine<MachineStates, MachineActions>(
+const StateMachineDef = new StateMachine<MachineStates, MachineActions>(
   'email',
   { view1: 'view1', view2: 'view2', view3: 'view3' },
   {
@@ -48,9 +48,10 @@ const SigninStateMachine = new StateMachine<MachineStates, MachineActions>(
 import { useMachineState } from 'react-easy-state-machine';
 
 const Component = () => {
-  const { states, actions, updateState, compareState } = useStateMachine<FormStates, FormActions>(
-    SigninStateMachine,
-  );
+  const { states, actions, updateState, compareState } = useStateMachine<
+    MachineStates,
+    MachineActions
+  >(StateMachineDef);
 
   return (
     <div>
