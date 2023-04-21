@@ -15,7 +15,7 @@
     "lint:fix": "eslint --fix ./src",
     "build": "rm -rf dist && tsc && rollup -c",
     "semantic-release": "semantic-release",
-    "commit": "cz"
+    "cz": "cz"
   },
   "repository": {
     "type": "git",
