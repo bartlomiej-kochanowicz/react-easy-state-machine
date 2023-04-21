@@ -1,6 +1,6 @@
 {
   "name": "react-easy-state-machine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "files": [
     "dist/**/*",
