@@ -15,12 +15,12 @@ jobs:
         with:
           node-version: 18.x
           cache-dependency-path: package-lock.json
-          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: npm install
       - name: Build package
         run: npm run build
       - name: Release
+        run: npm run semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
