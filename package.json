@@ -19,7 +19,8 @@
     "check:circular-deps": "madge --warning --circular --extensions ts,tsx src",
     "tsc": "tsc",
     "semantic-release": "semantic-release --branches main",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
