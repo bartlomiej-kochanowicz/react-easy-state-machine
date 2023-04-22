@@ -1,29 +1,5 @@
+import { actions, states, transitions } from '../tests/stubs/StateMachine.stub';
 import { StateMachine } from './StateMachine';
-
-const states = {
-  initial: 'initial',
-  state1: 'state1',
-  state2: 'state2',
-  final: 'final',
-} as const;
-
-const actions = {
-  CHANGE_TO_STATE1: 'CHANGE_TO_STATE1',
-  CHANGE_TO_STATE2: 'CHANGE_TO_STATE2',
-  CHANGE_TO_FINAL: 'CHANGE_TO_FINAL',
-} as const;
-
-const transitions = {
-  initial: {
-    CHANGE_TO_STATE1: 'state1',
-  },
-  state1: {
-    CHANGE_TO_STATE2: 'state2',
-  },
-  state2: {
-    CHANGE_TO_FINAL: 'final',
-  },
-} as const;
 
 describe('StateMachine', () => {
   const machine = new StateMachine<keyof typeof states, keyof typeof actions>(
