@@ -1,7 +1,8 @@
 import { act, renderHook } from '@testing-library/react';
-import { useStateMachine } from './useStateMachine';
+
 import { StateMachine } from '../classes/StateMachine';
 import { actions, states, transitions } from '../tests/stubs/StateMachine.stub';
+import { useStateMachine } from './useStateMachine';
 
 describe('useStateMachine', () => {
   const machine = new StateMachine<keyof typeof states, keyof typeof actions>(

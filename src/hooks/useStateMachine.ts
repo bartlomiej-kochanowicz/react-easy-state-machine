@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import { StateMachine } from '../classes/StateMachine';
 
 export const useStateMachine = <States extends string, Actions extends string>(
