@@ -17,7 +17,7 @@ jobs:
           cache-dependency-path: package-lock.json
       - name: Install dependencies
         run: npm install
-      - name: check cilcular dependencies
+      - name: Check cilcular dependencies
         run: npm run check:circular-deps
       - name: Run static analysis
         run: npm run lint
