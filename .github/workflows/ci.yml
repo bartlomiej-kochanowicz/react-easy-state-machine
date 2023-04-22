@@ -17,9 +17,11 @@ jobs:
           cache-dependency-path: package-lock.json
       - name: Install dependencies
         run: npm install
-      - name: chack cilcular dependencies
+      - name: check cilcular dependencies
         run: npm run check:circular-deps
       - name: Run static analysis
         run: npm run lint
       - name: Run tests
         run: npm run test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
