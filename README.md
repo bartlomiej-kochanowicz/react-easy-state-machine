@@ -69,6 +69,40 @@ const Component = () => {
 };
 ```
 
+### Use Machine states with context
+
+```typescript
+import { useMachineState } from 'react-easy-state-machine';
+
+type MachineContext = {
+  email: string;
+};
+
+const Component = () => {
+  const { states, actions, updateState, compareState, context } = useStateMachine<
+    MachineStates,
+    MachineActions,
+    MachineContext
+  >(StateMachineDef);
+
+  return (
+    <div>
+      {compareState(states.view1) && (
+        <button onClick={() => updateState(actions.CHANGE_TO_VIEW_2, { email: 'test@domain.com' })}>
+          Change to view 2
+        </button>
+      )}
+      {compareState(states.view2) && (
+        <button onClick={() => updateState(actions.CHANGE_TO_VIEW_3)}>
+          Change to view 3 - {context} /* here context is defined */
+        </button>
+      )}
+      {compareState(states.view3) && <div>View 3 - {context}</div>} /* here context is undefined */
+    </div>
+  );
+};
+```
+
 ## Issues
 
 Feel free to raise an issue on Github if you find a bug or have a feature request
